@@ -1,9 +1,8 @@
 
-maszyna1 = [5, 4, 9, 7, 2]  # czasy zadania pierwszego
-maszyna2 = [4, 2, 5, 11, 3]  # czasy zad drugiego
+maszyna1 = [5, 4, 9, 7, 2] 
+maszyna2 = [4, 2, 5, 11, 3]  
 
 zad = [0, 1, 2, 3, 4]
-
 
 def permute(xs, low=0):
     if low + 1 >= len(xs):
@@ -16,11 +15,6 @@ def permute(xs, low=0):
             for p in permute(xs, low + 1):
                 yield p
             xs[low], xs[i] = xs[i], xs[low]
-
-
-# for p in permute(zad)#
-# print(p)
-
 
 # funkcja licząca czas wykonywania wszystkich zadan
 def licz():
